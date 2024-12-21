@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+
+# Nodemon debug configuration
+*.pid
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.out
+
+# IDE/Editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# npm lockfile (if using Yarn instead of npm)
+package-lock.json
+
+# Coverage directory (if you add tests later)
+coverage/
