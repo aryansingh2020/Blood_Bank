@@ -1,28 +1,31 @@
 // const express=require('express')
 import express from 'express'
-// import Donor from './models/donor.js'
-import connectDb from './config/db.js'
-import createDonor from './controllers/createDonor.js'
-import getAllDonors from './controllers/getAllDonors.js'
-import deleteDonor from './controllers/deleteDonor.js'
+import connectDb from './database/mongodb.js'
+import {PORT} from "./config/env.js"
+import authRouter from "./routes/auth.route.js"
+import userRouter from "./routes/user.route.js"
+import cookieParser from 'cookie-parser'
 import cors from 'cors'
-import dotenv from 'dotenv'
-dotenv.config()
+import seedBloodPackets from './utils/seedBloodPackets.js'
 
 const app=express()
-const port=5000
+const port=PORT
 
 //middleware
 app.use(express.json())
 app.use(cors({origin:'http://localhost:3000'}))
+app.use(cookieParser())
 
 //routes
-app.delete('/api/donors/:id',deleteDonor)
-app.post('/api/donors',createDonor);
-app.get('/api/donors',getAllDonors);
+app.use("/api/v1/auth",authRouter)
+app.use("/api/v1/user",userRouter)
 
-//database connection
-connectDb()
-app.listen(port,()=>{
+app.get("/",(req,res)=>{
+    res.send("Welcome to the Blood Donation App")
+})
+app.listen(port,async()=>{
+    await connectDb()
+    console.log("Database connected successfully")
+    await seedBloodPackets()
     console.log(`App running on port ${port}`)
 })

@@ -7,7 +7,7 @@ logs/
 npm-debug.log*
 
 # Environment variables
-.env
+.env.*
 
 # Nodemon debug configuration
 *.pid
