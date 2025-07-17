@@ -18,8 +18,6 @@ const Dashboard = () => {
         {activeForm === "home" && (
           <div className="text-center">
             <h2 className="text-3xl text-red-500 font-bold">Welcome to Blood Bank Dashboard</h2>
-            <p className="text-gray-700 mt-4">Use the navbar to manage users and blood records.</p>
-            <h2 className="text-2xl font-bold text-green-600">About </h2>
           </div>
         )}
 
