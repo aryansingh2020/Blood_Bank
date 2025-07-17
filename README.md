@@ -49,6 +49,7 @@ A full-stack web application built using the **MERN** stack (MongoDB, Express.js
 ---
 
 ## 📁 Project Structure
+```
 /
 ├── backend/ # Express.js server with MongoDB
 │ ├── models/
@@ -66,7 +67,7 @@ A full-stack web application built using the **MERN** stack (MongoDB, Express.js
 │ └── package.json
 │
 └── README.md
-
+```
 
 ---
 
