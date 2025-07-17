@@ -77,12 +77,17 @@ A full-stack web application built using the **MERN** stack (MongoDB, Express.js
 git clone https://github.com/aryansingh2020/Blood_Bank.git
 cd Blood_Bank
 
+```
+
 ### 2️⃣ Setup Backend
-bash
-Copy code
+```
 cd backend
 npm install
+```
+
 # create a .env file with:
+
+
 # MONGO_URI=your_mongodb_uri
 # JWT_SECRET=your_secret_key
 npm run dev
