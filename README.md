@@ -52,16 +52,24 @@ A full-stack web application built using the **MERN** stack (MongoDB, Express.js
 ```
 /
 ├── backend/ # Express.js server with MongoDB
+│ ├── config/
+| ├── controllers/
+| ├── database/
+│ ├── middlewares/
 │ ├── models/
 │ ├── routes/
-│ ├── middleware/
-│ ├── controllers/
+│ ├── utils/
+│ ├── .env.development.local/
 │ └── server.js
 │
 ├── frontend/ # React frontend with Tailwind UI
 │ ├── src/
+│ │ ├── api/
 │ │ ├── components/
-│ │ └── App.js
+│ │ ├── forms/
+│ │ ├── pages/
+│ │ ├── index.css
+│ │ └── index.js
 │ ├── public/
 │ ├── tailwind.config.js
 │ └── package.json
@@ -84,6 +92,7 @@ cd Blood_Bank
 ```bash
 cd backend
 npm install
+npm 
 
 ```
 
@@ -94,6 +103,7 @@ MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
 ```
 ```bash
+cd backend
 npm run dev
 ```
 
@@ -127,7 +137,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [22.x]
 
     steps:
       - name: ⬇️ Checkout code
