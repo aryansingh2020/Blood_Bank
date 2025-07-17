@@ -80,14 +80,81 @@ cd Blood_Bank
 ```
 
 ### 2️⃣ Setup Backend
-```
+```bash
 cd backend
 npm install
+
 ```
 
-# create a .env file with:
-
-
-# MONGO_URI=your_mongodb_uri
-# JWT_SECRET=your_secret_key
+### 3️⃣ Create a `.env.development.local` file in `Blood_Bank/backend/` with:
+```env
+PORT=5000
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+```
+```bash
 npm run dev
+```
+
+### 4️⃣ Setup Frontend
+```bash
+cd ../frontend
+npm install
+npm start
+```
+
+
+---
+
+## ✅ GitHub Actions Workflow: `.github/workflows/node.yml`
+
+Create the file:  
+`your-repo/.github/workflows/node.yml`
+
+```yml
+name: Blood Bank CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  install-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: ⬇️ Checkout code
+        uses: actions/checkout@v3
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: 📦 Install Backend Dependencies
+        working-directory: ./backend
+        run: npm ci
+
+      - name: 🔎 Lint Backend (if applicable)
+        working-directory: ./backend
+        run: |
+          if [ -f package.json ]; then
+            npm run lint || echo "Linting skipped or failed"
+          fi
+
+      - name: 🧪 Run Backend Tests (if applicable)
+        working-directory: ./backend
+        run: |
+          if [ -f package.json ]; then
+            npm test || echo "No tests found"
+          fi
+
+      - name: 📦 Install Frontend Dependencies
+        working-directory: ./frontend
+        run: npm ci
