@@ -38,7 +38,7 @@ const UpdateUser = () => {
   };
 
   return (
-    <div className="update-user bg-white p-6 rounded shadow-2xl">
+    <div className="update-user p-6 rounded shadow-2xl">
       <h2 className="text-2xl font-bold mb-4  text-red-500">Update User</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">

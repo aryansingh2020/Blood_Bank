@@ -16,8 +16,8 @@ const port=PORT
 app.use(express.json())
 
 app.use(cors({
-  // origin: "https://blood-bank-9gpy.onrender.com", // ✅ Frontend URL
-  origin:'http://localhost:3000',
+  origin: "https://blood-bank-9gpy.onrender.com", //Frontend URL
+  // origin:'http://localhost:3000',
   credentials: true,
 }));
 app.use(cookieParser())

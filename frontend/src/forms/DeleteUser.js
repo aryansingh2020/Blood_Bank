@@ -18,7 +18,7 @@ const DeleteUser = () => {
   };
 
   return (
-    <div className="delete-user bg-white p-6 rounded shadow-2xl max-h-fit">
+    <div className="delete-user p-6 rounded shadow-2xl max-h-fit">
       <form onSubmit={handleDelete}>
         <h2 className="text-2xl font-bold mb-4  text-red-500">Delete User</h2>
         <div className="mb-4">

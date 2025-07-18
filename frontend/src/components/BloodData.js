@@ -63,7 +63,7 @@ const BloodData = () => {
   }, []);
 
   return (
-    <div className=" max-w-fit max-h-fit p-6 bg-white rounded shadow-2xl">
+    <div className=" max-w-fit max-h-fit p-6 rounded shadow-2xl">
       <h2 className="text-2xl font-bold mb-4 text-center text-red-500">Blood Data Distribution</h2>
       {error && <p className="text-red-500 text-center">{error}</p>}
       {chartData ? (

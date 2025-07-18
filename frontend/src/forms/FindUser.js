@@ -26,7 +26,7 @@ const FindUser = () => {
   };
 
   return (
-    <div className="find-user bg-white p-6 rounded shadow-2xl max-h-fit">
+    <div className="find-user p-6 rounded shadow-2xl max-h-fit">
       <form onSubmit={handleSearch}>
         <h2 className="text-2xl font-bold mb-4 text-red-500">Find User</h2>
         <div className="mb-4">
