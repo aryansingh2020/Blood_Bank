@@ -7,9 +7,9 @@ const Navbar = ({ setActiveForm }) => {
     };
 
     return (
-        <nav className="navbar bg-red-500 text-white p-4 min-w-screen">
+        <nav className="navbar bg-red-500 text-white p-10 min-w-fit">
             <div className="container mx-auto flex justify-between items-center">
-                <h1 className="text-xl font-bold">Blood Bank</h1>
+                <h1 className="text-3xl font-bold p-1">Blood Bank</h1>
                 <div className="flex space-x-4">
                     <Button value="Home" onClick={() => setActiveForm("home")} />
                     <Button value="Register user" onClick={() => setActiveForm("register")} />

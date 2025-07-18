@@ -9,7 +9,7 @@ userRouter.put("/donate",authorize,donateBlood)
 userRouter.put("/receive",authorize,receiveBlood)
 userRouter.put("/update",authorize,updateUser)
 userRouter.delete("/delete",authorize,deleteUser)
-userRouter.get("/getUser",authorize,getUser)
+userRouter.get("/get-user",authorize,getUser)
 
 
 export default userRouter

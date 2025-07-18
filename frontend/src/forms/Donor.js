@@ -17,9 +17,10 @@ const handleSubmit = async (e) => {
     }
 }
     return(
-        <div className="donor-form bg-white p-6 rounded shadow-md">
-            <h2 className="text-2xl font-bold mb-4 text-red-500">Donor Form</h2>
-            <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md">
+        <div className="donor-form p-6 rounded max-h-fit shadow-2xl">
+            
+            <form onSubmit={handleSubmit}>
+                <h2 className="text-2xl font-bold mb-4 text-red-500 ">Donor Form</h2>
                 <div className="mb-4">
                     <label className="block text-gray-700">Registered email *</label>
                     <input required type="email" placeholder="Email" onChange={e => setFormData({ ...formData, email: e.target.value })} className="w-full p-2 border rounded" />

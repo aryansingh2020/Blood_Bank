@@ -11,7 +11,7 @@ const FindUser = () => {
   const handleSearch = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.get("/user/getUser", {
+      const res = await axios.get("/user/get-user", {
         params: formData
       });
 
@@ -26,9 +26,9 @@ const FindUser = () => {
   };
 
   return (
-    <div className="find-user bg-white p-6 rounded shadow-md">
-      <h2 className="text-2xl font-bold mb-4 text-red-500">Find User</h2>
+    <div className="find-user bg-white p-6 rounded shadow-2xl max-h-fit">
       <form onSubmit={handleSearch}>
+        <h2 className="text-2xl font-bold mb-4 text-red-500">Find User</h2>
         <div className="mb-4">
           <label className="block text-gray-700">Registered email *</label>
           <input type="email" placeholder="Email" className="w-full p-2 border rounded"

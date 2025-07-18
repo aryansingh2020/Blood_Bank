@@ -18,9 +18,9 @@ const DeleteUser = () => {
   };
 
   return (
-    <div className="delete-user bg-white p-6 rounded shadow-md">
-      <h2 className="text-2xl font-bold mb-4  text-red-500">Delete User</h2>
+    <div className="delete-user bg-white p-6 rounded shadow-2xl max-h-fit">
       <form onSubmit={handleDelete}>
+        <h2 className="text-2xl font-bold mb-4  text-red-500">Delete User</h2>
         <div className="mb-4">
           <label htmlFor="email" className="block text-gray-700 mb-2">Registered email *</label>
           <input type="email" placeholder="email" id="email" className="w-full p-2 border border-gray-300 rounded"

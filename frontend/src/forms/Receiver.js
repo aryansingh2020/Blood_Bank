@@ -24,9 +24,8 @@ const Receiver = () => {
   };
 
   return (
-    <div className="receiver bg-gray-100 min-w-screen min-h-screen p-6">
-     
-      <form className="bg-white p-6 rounded shadow-md" onSubmit={handleSubmit}>
+    <div className=" receiver-form p-6 rounded max-h-fit shadow-2xl">
+      <form  onSubmit={handleSubmit}>
          <h2 className="text-2xl font-bold mb-4 text-red-500">Receiver Form</h2>
         <div className="mb-4">
           <label htmlFor="email" className="block text-gray-700 mb-2">Registered email *</label>
